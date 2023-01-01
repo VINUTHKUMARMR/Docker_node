@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('checkout scm'){
             steps{
-               git changelog: false, poll: false, url: 'https://github.com/VINUTHKUMARMR/Docker_node.git'
+               git branch: 'main', changelog: false, credentialsId: 'github_cred', poll: false, url: 'https://github.com/VINUTHKUMARMR/Docker_node.git'
             }
         }
         stage('build image'){
