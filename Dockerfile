@@ -5,4 +5,4 @@ WORKDIR /home/ubuntu/git/
 RUN git clone https://github.com/koddas/war-web-project.git && pwd && ls
 WORKDIR /home/ubuntu/git/war-web-project
 RUN mvn clean install
-
+EXPOSE 8080
