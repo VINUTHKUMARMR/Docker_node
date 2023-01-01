@@ -15,6 +15,7 @@ pipeline{
                   
                   docker build -t daemon/nodeapp:$BUILD_NUMBER .
                   docker tag daemon/nodeapp:$BUILD_NUMBER vinuthkumarmr/mypractice:$BUILD_NUMBER
+                  docker run -it -d --name newcon1 vinuthkumarmr/mypractice:$BUILD_NUMBER
                   
                   '''
             }
